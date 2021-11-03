@@ -42,12 +42,6 @@ const Home = () => {
 
     }
 
-    useEffect(() => {
-        console.log(name)
-        console.log(phone)
-        console.log(email)
-    }, [name, phone, email])
-
     return <div>
         <h1>LEADS</h1>
         <label> Nome </label>

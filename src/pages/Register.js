@@ -20,9 +20,6 @@ const Register = () => {
     }, [password, passwordConfirmation])
 
     useEffect(() => {
-        console.log(password)
-        console.log(user)
-
         if (password.length > 0 && user.length > 0) {
             setEmptyFieldError(false)
         } else {
@@ -39,12 +36,6 @@ const Register = () => {
             setMatchError(true)
         }
     }, [password, passwordConfirmation])
-
-    useEffect(() => {
-        console.log("confirmation Error", confirmationError)
-        console.log("match Error", matchError)
-        console.log("empry Field Error", emptyFieldError)
-    }, [confirmationError, matchError, emptyFieldError])
 
     const handleSubmit = () => {
         if(!matchError && !emptyFieldError && !confirmationError){
